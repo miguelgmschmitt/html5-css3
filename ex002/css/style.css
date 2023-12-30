@@ -1,0 +1,116 @@
+@charset "UTF-8";
+/*fonte baixada do dafont*/
+@font-face {
+    font-family: 'fonteTeste';
+    src: url('../fontes/bronzion_deco/fonteteste.otf') format(opentype);
+
+    /*Tipos de format()
+    -opentype (otf)
+    -truetype (ttf)
+    -embedded-opentype
+    -truetype-aat (Apple Advanced Typography)
+    -svg
+    
+    
+    */
+}
+
+/*fontes importadas do googlefontes*/
+@import url('https://fonts.googleapis.com/css2?family=Lugrasimo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-image: linear-gradient(to right, #0367A6, #04B2D9);
+}
+
+main{
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px #04C4D9;
+    width: 600px;
+    padding: 15px;
+    margin: auto;
+}
+/*
+id    = # em CSS
+class = . em CSS
+:     = pseudo-class
+::    = pseudo-element
+>     = children
+
+OBS.: NÃO SE DEVE USAR O MESMO ID NA MESMA PÁGINA, FUNCIONA MAS ESTÁ ERRADO. CLASSE SIM.
+*/
+
+h1#principal{
+    color: #e5da82;
+    text-align: center;
+    text-shadow: 1px 1px 2px black ;
+    /* SHORT HAND FONT: atalho para propriedade da font
+    - font-style -> font-weight -> font-size -> font family
+    */
+    font: italic bolder 3em 'fonteTeste', cursive;
+}
+.basico{
+    color:#04B2D9;
+}
+h2{
+    color: #3a424b;
+    font-family: 'Lugrasimo', cursive;
+    text-indent: 40px;
+}
+
+p{
+    text-align: justify;
+    font-weight: normal;
+    font-style: normal;
+    font-family: 'Lugrasimo', cursive;
+    font-size: 1.0em;
+    text-indent: 40px;
+}
+
+div:hover{
+    background-color: #71818b44;
+}
+
+/*
+div com um filho <p> dizendo para não mostrar o paragrafo
+*/
+div > img {
+    display: none;
+}
+/*
+div com um filho <p>  dizendo para  mostrar o paragrafo
+*/
+div:hover > img {
+    display: block;
+}
+
+.menu{
+    position: relative;
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+    background-color: #d3f5fc;
+    max-width: 100%;
+    border-radius: 10px;
+
+}
+
+.basico > {
+    background-color: #171c1d;
+}
+
+a{
+    text-decoration: none;
+}
+
+a::after{
+    content: '☜';
+}
+a::before{
+    content: '☞';
+}
